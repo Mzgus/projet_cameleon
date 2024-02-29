@@ -1,0 +1,172 @@
+html{
+    background-color: #2f3848;
+}
+
+body{
+    background-color: #2f3848;
+    margin: auto;
+    width: 900px;
+}
+
+#coeur{
+    display: inline-block;
+    animation-duration: 1s;
+    animation-name: battement1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes battement1 {
+    from {
+      transform: scale(1, 1); 
+    }
+  
+    to {
+      transform: scale(1.5, 1.5);
+    }
+}
+
+#coeur2{
+    display: inline-block;
+    animation-duration: 1s;
+    animation-name: battement2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes battement2 {
+    from {
+        transform: scale(1, 1); 
+    }
+    
+    to {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+header h1{
+    text-align: center;
+    background-color: #f05768;
+    color: white;
+    font-style: italic;
+    padding: 1%;
+    border-bottom: solid white;
+}
+
+header a {
+    color: yellowgreen;
+    margin: 1rem;
+}
+
+header img{
+    width: 25%;
+    margin: 0.5rem;
+}
+
+div#logo{
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 65%;
+}
+
+div#logo img:hover{
+    width: 50%;
+}
+
+#blog{
+    display: flex;
+}
+header h2{
+    color: #00ccff;
+    font-style: italic;
+}
+
+header p{
+    color: white;
+}
+
+header p strong{
+    color: yellowgreen;
+    text-decoration: underline;
+}
+
+.container{
+    grid-area: container;
+    position: relative;
+}
+
+
+main div.container h3{
+    color: white;
+    background-color: #f05768;
+    width: 35%;
+    height: 7%;
+    padding: 0.5%;
+    text-transform:uppercase;
+    position: absolute;
+    margin: auto;
+}
+
+.cam{
+    margin-bottom: 2rem;
+}
+
+main article{
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: none;
+    grid-template-areas:
+        "group side";
+    align-items: start;
+    gap: 3%;
+}
+
+.group{
+    grid-area: group;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1%;
+}
+
+.group img{
+    width: 100%;
+}
+
+.group img#came1{
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+hr{
+    color: #00ccff;
+}
+
+.side{
+    padding: 9% 10%;
+    grid-area: side;
+    background-color: #004488;
+}
+
+.side h3{
+    color: #00ccff;
+    font-weight: bold;
+    text-transform:uppercase;
+}
+
+.side a , .side p{
+    color: yellowgreen;
+}
+
+.side a{
+    text-decoration: underline;
+}
+
+footer{
+    text-align: center;
+    color: #00ccff;
+    margin: 10% 0 2% 0;
+}
